@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L'eau — Cycle, importance et quiz</title>
+  <meta name="description"
+    content="Découvre le cycle de l'eau, son importance et teste tes connaissances avec un quiz." />
+  <link rel="stylesheet" href="H2O.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script defer src="H2O.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">💧</span>
+      <h1>L'eau</h1>
+    </div>
+    <button id="themeToggle" class="btn" aria-label="Basculer thème">
+      Thème sombre
+    </button>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigation principale">
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#cycle">Cycle de l’eau</a></li>
+      <li><a href="#importance">Importance</a></li>
+      <li><a href="#onglets">Utilisations</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Comprendre l’eau, source de vie</h2>
+      <p>Explore le cycle de l’eau, son rôle vital, et teste tes connaissances.</p>
+      <a class="btn btn-primary" href="#intro">Commencer</a>
+    </div>
+    <!-- Animation de vagues décorative -->
+    <div class="waves" aria-hidden="true">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+  </div>
+
+  <main>
+    <section id="intro" class="section">
+      <h3>Introduction</h3>
+      <p>
+        L’eau couvre environ 71% de la surface terrestre. Elle circule en permanence
+        via le cycle de l’eau, soutenant les écosystèmes, l’agriculture, l’énergie
+        et la vie quotidienne. Préserver cette ressource est essentiel.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" data-target="71">0</div>
+          <div class="stat-label">Surface terrestre couverte d’eau (%)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-target="2.5">0</div>
+          <div class="stat-label">Eau douce sur Terre (%)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-target="1">0</div>
+          <div class="stat-label">Accès domestique sans gaspillage (objectif en litres/jour)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cycle" class="section">
+      <h3>Cycle de l’eau</h3>
+      <div class="cycle-grid">
+        <article class="card">
+          <h4>Évaporation</h4>
+          <p>La chaleur du soleil transforme l’eau liquide en vapeur qui monte dans l’atmosphère.</p>
+        </article>
+        <article class="card">
+          <h4>Condensation</h4>
+          <p>La vapeur se refroidit et forme des nuages constitués de minuscules gouttelettes.</p>
+        </article>
+        <article class="card">
+          <h4>Précipitations</h4>
+          <p>L’eau retombe sous forme de pluie, neige ou grêle selon les conditions.</p>
+        </article>
+        <article class="card">
+          <h4>Ruissellement & infiltration</h4>
+          <p>L’eau retourne vers les cours d’eau, les lacs ou les nappes souterraines.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="importance" class="section">
+      <h3>Pourquoi l’eau est vitale</h3>
+      <ul class="list">
+        <li><strong>Écosystèmes:</strong> Elle régule le climat et soutient la biodiversité.</li>
+        <li><strong>Santé:</strong> Hydratation, hygiène, prévention des maladies.</li>
+        <li><strong>Économie:</strong> Agriculture, industrie, énergie et transport.</li>
+        <li><strong>Culture:</strong> Paysages, loisirs, patrimoine et identités locales.</li>
+      </ul>
+      <blockquote>
+        Astuce: Réduis le gaspillage en réparant les fuites et en utilisant des mousseurs sur les robinets.
+      </blockquote>
+    </section>
+
+    <section id="onglets" class="section">
+      <h3>Utilisations de l’eau (onglets)</h3>
+      <div class="tabs" role="tablist" aria-label="Utilisations de l’eau">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="tab1"
+          id="tab-btn-1">Domestique</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab2" id="tab-btn-2">Agriculture</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab3" id="tab-btn-3">Énergie</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel active" id="tab1" role="tabpanel" aria-labelledby="tab-btn-1">
+          <p>Consommation, hygiène, cuisine, nettoyage — souvent le lieu principal pour réduire le gaspillage.</p>
+        </div>
+        <div class="tab-panel" id="tab2" role="tabpanel" aria-labelledby="tab-btn-2">
+          <p>Irrigation, élevage et gestion des sols — l’efficacité dépend de techniques comme le goutte-à-goutte.</p>
+        </div>
+        <div class="tab-panel" id="tab3" role="tabpanel" aria-labelledby="tab-btn-3">
+          <p>Hydroélectricité et refroidissement industriel — concilier production et protection des milieux.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <h3>Quiz sur l’eau</h3>
+      <form id="quizForm" class="quiz" novalidate>
+        <div class="quiz-item">
+          <label for="q1"><strong>Surface de la Terre couverte d’eau:</strong> Quelle proportion est la plus proche
+            ?</label>
+          <select id="q1" name="q1" required>
+            <option value="">— Sélectionner —</option>
+            <option value="60">60%</option>
+            <option value="71">71%</option>
+            <option value="85">85%</option>
+          </select>
+        </div>
+
+        <div class="quiz-item">
+          <fieldset>
+            <legend><strong>Eau douce:</strong> Environ quelle part de l’eau totale est douce ?</legend>
+            <label><input type="radio" name="q2" value="2.5" required /> 2,5%</label>
+            <label><input type="radio" name="q2" value="25" /> 25%</label>
+            <label><input type="radio" name="q2" value="0.5" /> 0,5%</label>
+          </fieldset>
+        </div>
+
+        <div class="quiz-item">
+          <label for="q3"><strong>Gaspillage:</strong> Coche une action efficace pour économiser l’eau.</label>
+          <select id="q3" name="q3" required>
+            <option value="">— Sélectionner —</option>
+            <option value="arrosageMidi">Arroser le jardin à midi en été</option>
+            <option value="fuites">Réparer les fuites rapidement</option>
+            <option value="bainQuotidien">Prendre un bain tous les jours</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Valider</button>
+        <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 — Projet éducatif sur l’eau. Fait avec HTML, CSS et JS.</p>
+    <a class="btn btn-ghost" href="#intro">Haut de page</a>
+  </footer>
+</body>
+
+</html>
